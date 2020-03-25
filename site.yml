@@ -1,0 +1,19 @@
+site:
+  title: Antora Demo Site
+  start_page: antora-plantuml::index.adoc
+content:
+  sources:
+  - url: .
+    branches: master
+ui:
+  bundle:
+    url: ./ui-bundle.zip
+asciidoc:
+  extensions:
+    - asciidoctor-plantuml
+  attributes:
+    plantuml-server-url: 'http://plantuml:8080'
+    plantuml-fetch-diagram: true
+    imagesoutdir: ./web
+output:
+  dir: ./web
